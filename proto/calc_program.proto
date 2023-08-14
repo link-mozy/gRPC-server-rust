@@ -1,0 +1,25 @@
+syntax = "proto3";
+package calc_program;
+
+service CalcProgram {
+    rpc Sum (SumRequest) returns (SumResponse);
+    rpc Minus (MinusRequest) returns (MinusResponse);
+}
+
+message SumRequest {
+    string number_1 = 1;
+    string number_2 = 2;
+}
+
+message SumResponse {
+    string data = 1;
+}
+
+message MinusRequest {
+    string number_1 = 1;
+    string number_2 = 2;
+}
+
+message MinusResponse {
+    string data = 1;
+}
